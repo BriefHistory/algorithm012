@@ -22,4 +22,11 @@ class Solution:
                 if nums[i] > nums[j]:
                     dp[i] = max(dp[i], dp[j] + 1)# dp[i] = dp[j] + 1 (其中 i > j, nums[i] > nums[j])
         return max(dp)
+```
+## 字符串匹配算法
+字符串匹配算法(了解原理)
 
+* Rabin-Karp算法，暴力算法基础上，进行哈希运算。将目标字符串(长度N)txt中子串(长度M)pat，全部哈希运算，比较哈希值，如果值不同，肯定不匹配，如果相同还需要使用朴素算法再次判断。——类似布隆过滤器。
+* KMP算法(Knuth-Morris-Pratt)，最长公共前后缀个数+字母=前缀表。通过前缀表进行匹配。
+* Boyer-Moore算法：各种编辑器查找功能大多采用此算法。德克萨斯大学的Robert S. Boyer教授和J Strother Moore教授发明了这种算法。
+Sunday算法
